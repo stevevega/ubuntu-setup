@@ -51,6 +51,14 @@ Devices -> Shared Clipboard -> Bidirectional.
 Add code from host as shared folder
 Devices -> Shared Folder -> Shared Folder Settings
 
+To allow your user to access the shared folder:
+
+```sh
+sudo adduser $USER vboxsf
+```
+
+Reboot for the change to take effect.
+
 ## Setup Mac keyboard mapping
 
 ```sh
