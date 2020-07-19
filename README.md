@@ -29,15 +29,7 @@ sudo apt install --yes git
 git clone https://github.com/stevevega/ubuntu-setup.git
 ```
 
-Check [VirtualBox settings](#virtualbox-settings) for additional VirtualBox setup instructions.
-
-# Usage
-
-To run the default playbook:
-
-```sh
-ansible-playbook -i inventories/localhost -K ubuntu.yml
-```
+Check [VirtualBox setup](virtualbox-setup) for additional VirtualBox setup instructions.
 
 # VirtualBox setup
 
@@ -82,3 +74,11 @@ Answers for install prompts:
 - y: Do you want multi-language on Right Alt key?
 - y: Would you like to give VS Code Sublime Text keymaps?
 - y: Do you want to apply system level shortcuts?
+
+# Usage
+
+To run the default playbook:
+
+```sh
+ansible-playbook -i inventories/localhost -K ubuntu.yml
+```
