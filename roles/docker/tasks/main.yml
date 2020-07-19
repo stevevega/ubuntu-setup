@@ -19,6 +19,7 @@
 - name: Get lsb_release codename needed for Docker repository
   shell: lsb_release -cs
   register: lsb_release_codename
+  changed_when: False
 
 - name: Add Docker Repository
   become: yes
