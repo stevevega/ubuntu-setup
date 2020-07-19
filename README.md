@@ -13,7 +13,7 @@ sudo apt update
 sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install --yes ansible
-# to prevent: repository does not have a release file.
+# to prevent: repository does not have a release file error.
 sudo apt-add-repository --yes -r ppa:ansible/ansible
 ```
 
@@ -29,7 +29,7 @@ sudo apt install --yes git
 git clone https://github.com/stevevega/ubuntu-setup.git
 ```
 
-4. Setup VirtualBox (optional when using VirtualBox)
+4. Setup VirtualBox Guest Additions (when using VirtualBox)
 
 ```sh
 sudo apt install virtualbox-guest-additions-iso
@@ -45,3 +45,13 @@ To run the default playbook:
 ```sh
 ansible-playbook -i inventories/localhost -K ubuntu.yml
 ```
+
+# VirtualBox settings
+
+Recommended settings when using VirtualBox:
+
+1. At least 2GB RAM.
+2. At least 128MB for Video Memory.
+3. At least 20GB of dynamic storage.
+4. Devices -> Shared Clipboard -> Bidirectional.
+5. Add code from host as shared folder.
