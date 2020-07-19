@@ -1,0 +1,14 @@
+- name: Install virtualbox-guest-additions-iso
+  apt:
+    name: virtualbox-guest-additions-iso
+    update_cache: yes
+
+- name: Mount virtualbox-guest-additions-iso
+  mount:
+    path: /media/
+    src: /usr/share/virtualbox/VBoxGuestAdditions.iso
+    opts: loop
+    state: present
+
+- name: Execute virtualbox-guest-additions-iso
+  shell: /media/VBoxLinuxAdditions.run
