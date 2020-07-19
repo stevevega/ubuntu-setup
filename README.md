@@ -1,10 +1,10 @@
 # Ubuntu Setup
 
-Ansible playbook to setup Ubuntu for personal usage.
+Ansible playbook to setup Ubuntu.
 
-# Getting started
+# Prerequisites
 
-To setup your environment after installing Ubuntu:
+To prepare your environment:
 
 1. Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu)
 
@@ -22,14 +22,6 @@ sudo apt-add-repository --yes -r ppa:ansible/ansible
 ```sh
 sudo apt install --yes git
 ```
-
-3. Clone this repo
-
-```sh
-git clone https://github.com/stevevega/ubuntu-setup.git
-```
-
-Check [VirtualBox setup](virtualbox-setup) for additional VirtualBox setup instructions.
 
 # VirtualBox setup
 
@@ -77,8 +69,15 @@ Answers for install prompts:
 
 # Usage
 
-To run the default playbook:
+1. Clone the repo
 
 ```sh
+git clone https://github.com/stevevega/ubuntu-setup.git
+```
+
+2. Run the Ansible playbook:
+
+```sh
+cd ubuntu-setup
 ansible-playbook -i inventories/localhost -K ubuntu.yml
 ```
