@@ -13,6 +13,8 @@ sudo apt update
 sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install --yes ansible
+# to prevent: repository does not have a release file.
+sudo apt-add-repository --yes -r ppa:ansible/ansible
 ```
 
 2. Install git
