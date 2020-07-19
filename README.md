@@ -1,6 +1,6 @@
 # Ubuntu Setup
 
-Ansible playbook to setup Ubuntu in a VirtualBox machine for personal usage.
+Ansible playbook to setup Ubuntu for personal usage.
 
 # Getting started
 
@@ -29,10 +29,13 @@ sudo apt install --yes git
 git clone https://github.com/stevevega/ubuntu-setup.git
 ```
 
-4. Setup VirtualBox
+4. Setup VirtualBox (optional when using VirtualBox)
 
 ```sh
-ansible-playbook -i inventories/localhost -K virtualbox.yml
+sudo apt install virtualbox-guest-additions-iso
+sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
+sudo /media/VBoxLinuxAdditions.run
+sudo shutdown -r now
 ```
 
 # Usage
