@@ -33,3 +33,18 @@
     name: docker-ce
     state: latest
     update_cache: yes
+
+- name: Create the docker group
+  become: yes
+  group:
+    name: docker
+    state: present
+
+- name: Add user {{ ansible_user }} to the docker group
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+  notify:
+    - enable_user_in_docker_group

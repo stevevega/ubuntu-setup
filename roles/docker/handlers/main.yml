@@ -1,0 +1,2 @@
+- name: enable_user_in_docker_group
+  debug: msg="Docker group changed, run 'exec sudo su --login $USER' in your terminal"
