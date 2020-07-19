@@ -8,7 +8,8 @@
     path: /media/
     src: /usr/share/virtualbox/VBoxGuestAdditions.iso
     opts: loop
-    state: present
+    fstype: auto
+    state: mounted
 
 - name: Execute virtualbox-guest-additions-iso
   shell: /media/VBoxLinuxAdditions.run
