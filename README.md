@@ -24,7 +24,7 @@ sudo apt install --yes git
 3. Clone this repo
 
 ```sh
-git clone git@github.com:stevevega/ubuntu-setup.git
+git clone https://github.com/stevevega/ubuntu-setup.git
 ```
 
 4. Setup VirtualBox
