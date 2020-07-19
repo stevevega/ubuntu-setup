@@ -7,7 +7,7 @@
   mount:
     path: /media/
     src: /usr/share/virtualbox/VBoxGuestAdditions.iso
-    opts: loop
+    opts: loop,rw
     fstype: auto
     state: mounted
 
