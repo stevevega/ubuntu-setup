@@ -1,7 +1,7 @@
 - name: Cloning https://github.com/rbreaves/kinto.git
   git:
     repo: https://github.com/rbreaves/kinto.git
-    dest: /tmp
+    dest: /tmp/kinto
 
 - name: Installing kinto
   command: /opt/kinto/setup.py
