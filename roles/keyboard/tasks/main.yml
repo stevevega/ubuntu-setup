@@ -4,4 +4,4 @@
     dest: /tmp/kinto
 
 - name: Installing kinto
-  command: /opt/kinto/setup.py
+  command: /tmp/kinto/setup.py
