@@ -29,14 +29,7 @@ sudo apt install --yes git
 git clone https://github.com/stevevega/ubuntu-setup.git
 ```
 
-4. Setup VirtualBox Guest Additions (when using VirtualBox)
-
-```sh
-sudo apt install virtualbox-guest-additions-iso
-sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
-sudo /media/VBoxLinuxAdditions.run
-sudo shutdown -r now
-```
+Check [VirtualBox settings](#virtualbox-settings) for additional VirtualBox setup instructions.
 
 # Usage
 
@@ -46,12 +39,46 @@ To run the default playbook:
 ansible-playbook -i inventories/localhost -K ubuntu.yml
 ```
 
-# VirtualBox settings
+# VirtualBox setup
 
 Recommended settings when using VirtualBox:
 
 1. At least 2GB RAM.
 2. At least 128MB for Video Memory.
 3. At least 20GB of dynamic storage.
-4. Devices -> Shared Clipboard -> Bidirectional.
-5. Add code from host as shared folder.
+
+## Setup VirtualBox Guest Additions
+
+```sh
+sudo apt install virtualbox-guest-additions-iso
+sudo mount -o loop /usr/share/virtualbox/VBoxGuestAdditions.iso /media/
+sudo /media/VBoxLinuxAdditions.run
+sudo shutdown -r now
+```
+
+## Additional settings
+
+Change host key:
+Preferences -> Input -> Virtual Machine -> Host Key Combination: Right ⌘
+
+Setup clipboard:
+Devices -> Shared Clipboard -> Bidirectional.
+
+Add code from host as shared folder
+Devices -> Shared Folder -> Shared Folder Settings
+
+## Setup Mac keyboard mapping
+
+```sh
+git clone https://github.com/rbreaves/kinto.git /tmp/kinto
+cd /tmp/kinto
+./setup.py
+```
+
+Answers for install prompts:
+
+- 1: Kinto - xkeysnail (udev/x11) - Recommended
+- 2: Mac Only & VMs on Macbooks - 3rd & 1st party Apple keyboards
+- y: Do you want multi-language on Right Alt key?
+- y: Would you like to give VS Code Sublime Text keymaps?
+- y: Do you want to apply system level shortcuts?
