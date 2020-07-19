@@ -1,6 +1,7 @@
 ---
 - name: VirtualBox setup play
   hosts: ubuntu
+  become: yes
   gather_facts: no
   roles:
     - virtualbox
