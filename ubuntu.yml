@@ -3,5 +3,6 @@
   hosts: ubuntu
   gather_facts: no
   roles:
+    - network
     - git
     - docker

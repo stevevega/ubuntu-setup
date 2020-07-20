@@ -1,0 +1,6 @@
+- name: Install latest version of net-tools
+  become: yes
+  apt:
+    name: net-tools
+    state: latest
+    update_cache: yes
