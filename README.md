@@ -43,21 +43,28 @@ sudo shutdown -r now
 ## Additional settings
 
 Change host key:
-Preferences -> Input -> Virtual Machine -> Host Key Combination: Right ⌘
+
+- Preferences -> Input -> Virtual Machine -> Host Key Combination: Right ⌘
 
 Setup clipboard:
-Devices -> Shared Clipboard -> Bidirectional.
+
+- (Machine) -> Devices -> Shared Clipboard -> Bidirectional.
+
+Accessing VirtualBox guest from host
+
+- File -> Host Network Manager -> Create
+- (Machine) -> Settings -> Network -> Adapter 2 -> Enable Network Adapter -> Attached to: Host-only Adapter
 
 Add code from host as shared folder
-Devices -> Shared Folder -> Shared Folder Settings
 
-To allow your user to access the shared folder:
+- (Machine) -> Devices -> Shared Folder -> Shared Folder Settings
+- Allow your user to access the shared folder:
 
 ```sh
 sudo adduser $USER vboxsf
 ```
 
-Reboot for the change to take effect.
+- Reboot for the change to take effect.
 
 ## Setup Mac keyboard mapping
 
