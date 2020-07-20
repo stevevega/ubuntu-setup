@@ -48,3 +48,9 @@
     append: yes
   notify:
     - enable_user_in_docker_group
+
+- name: Install docker-compose
+  become: yes
+  apt:
+    name: docker-compose
+    state: latest
